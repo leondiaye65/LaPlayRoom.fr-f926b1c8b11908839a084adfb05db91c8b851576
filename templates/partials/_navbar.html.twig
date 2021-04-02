@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-darkgrey">
+    <a class="navbar-brand logo" href="{{ path ('la_play_room_accueil') }}" title="Accueil du site">LaPlayRoom.fr</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"   role="button"
+                   data-toggle="dropdown"  aria-haspopup="true"  aria-expanded="false">
+                    <i class="fas fa-couch" ></i>Rooms
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ path('app_la_french_room') }}">La French Room</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ path('app_le14_18') }}">Le 14_18</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ path('app_l_afro_room') }}">L_Afro_Room</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ path('app_le_live_room') }}">Live_Room</a>
+                </div>
+
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  role="button"
+                   data-toggle="dropdown"  aria-haspopup="true"  aria-expanded="false">
+                    <i class="fas fa-rss"></i>News
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ path('app_music_news') }}">Music News</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ path('app_news_events') }}">News Events</a>
+                    <a class="dropdown-item" href="#"></a>
+                </div>
+            </li>
+
+            {% if is_granted('ROLE_ADMIN') %}
+
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_contact') }}"><i class="fas fa-address-book"></i>Contact</a>
+                </li>
+            {% endif %}
+
+        </ul>
+        <!-- Search form -->
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav">
+            {% if is_granted('ROLE_ADMIN') %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('bo_accueil') }}"><i class="fas fa-tachometer-alt"></i>Tableau de bord<span class="sr-only">(current)</span></a>
+                </li>
+            {% else %}
+
+            {% endif %}
+
+            {% if is_granted('ROLE_USER') %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown"  aria-haspopup="true"  aria-expanded="false">
+                        <i class="fas fa-user-circle"></i>Mon Compte
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href=" {{ path('app_logout') }}"><i class="fas fa-power-off"></i>Deconnexion</a>
+                    </div>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href=" {{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_register') }}"><i class="far fa-registered"></i>Inscription</a>
+                </li>
+            {% endif %}
+        </ul>
+
+    </div>
+</nav>

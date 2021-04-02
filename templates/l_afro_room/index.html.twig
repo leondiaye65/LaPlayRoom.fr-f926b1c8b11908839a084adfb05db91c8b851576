@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ titre_page }}{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    {{ include('partials/_audiol_afro_room.html.twig') }}
+
+    <h2 class="mt-4">{{ titre_section }}</h2>
+
+    <div class="container mt-4 d-flex">
+
+    <div>
+    <img src="{{ asset('images/AFRO&CARIBEANROOM.png')}}" alt="AFROCARIBEANROOM" width="300" height="200">
+    </div>
+
+    <div class="container ml-4">
+    <h3>PRESENTATION</h3>
+
+    L'AFRO ROOM
+    Tous les vendredis soirs de 21h à 23h, La Playroom vous propose une sélection musicale qui vous fera voyager aux quatre coins de la caraïbe, du continent africain. Posez vous aux confins de la musique d'Haïti à la Réunion en passant par le Brésil et toutes les influences latines !
+
+    </div>
+
+
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.logo {;
+    font-family: 'Monoton', cursive;
+    font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/*Navbar*/
+
+.navbar-nav a {
+
+    font-family: 'Prata', serif;
+  }
+
+/*Formulaire*/
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 4rem auto;
+  box-shadow: 1px 3px 9px 13px rgba(0, 0, 0, 0.06);
+
+}
+   h2 {
+    font-family: 'Bungee Inline', cursive;
+   text-align: center;
+
+  }
+  a:hover{
+    color: #01579b;
+    transform: translateY(-2px);
+
+   }
+
+  h3{
+    text-align: center;
+    color: #c8e6c9;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 1.5rem;
+    background-color: #444;
+
+
+
+  }
+
+  .login-form-content {
+    padding: 1.5rem;
+  }
+    input{
+      border-radius: 0;
+
+    }
+
+    btn-login{
+
+      width: 100%;
+      border-radius: 0;
+      text-transform: uppercase;
+
+    }
+
+  .contact {
+    padding: 1.5rem;
+   }
+
+  /*button {*/
+  /*  width: 100%;*/
+  /*  border-radius: 0;*/
+  /*  text-transform: uppercase;*/
+
+  /*}*/
+
+/* player */
+.glob-player{padding: 10px;border-radius: 5px;background: #000;}
+.glob-player .glob-btn{
+    text-align: center;
+
+}
+
+
+body{
+    background-color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 10vw;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.contenu{
+    /* grow shrink basis */
+    flex: 1 0 auto;
+}
+
+.contenu p {
+    padding: 5vw 10vw;
+    text-align: justify;
+}
+
+footer {
+    flex-shrink: 0;
+    border-top: 1px dashed #000;
+    width: 100%;
+    background: #f1f1f1;
+    color: #333;
+}
+
+.contenu-footer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 100px;
+}
+
+.bloc {
+    width: 25%;
+    margin: 0 30PX;
+}
+
+
+.footer-projet h4,
+.footer-contact h4,
+.footer-horaires h4,
+.footer-medias h4 {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+/* Contact */
+.footer-contact p {
+    padding: 5px 0;
+}
+/* Projet */
+.footer-projet  p {
+    padding: 5px 0;
+}
+
+
+/* Horaires & Medias */
+.liste-horaires,
+.liste-media {
+    list-style-type: none;
+}
+
+/* Horaires */
+
+.liste-horaires {
+    position: relative;
+    right: 10px;
+}
+.liste-horaires li {
+    padding: 10px 0;
+}
+.liste-horaires a {
+    text-decoration: none;
+    color: #333;
+}
+.liste-horaires a:hover {
+    color:rgb(3,3,3);
+}
+
+/* Medias */
+
+.liste-medias {
+    position: relative;
+    right: 10px;
+}
+.liste-medias li {
+    text-decoration: none;
+}
+
+.liste-medias img {
+    width: 40px;
+    margin: 10px 10px;:
+}
+.liste-medias a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+
+/* Media queries */
+
+ @media screen and (max-width: 1300px) {
+     .contenu-footer {
+         width: 700px;
+         flex-wrap: wrap;
+     }
+     .bloc {
+         width: 40px;
+         margin: 0 0;
+     }
+     .bloc:nth-child(1),
+     .bloc:nth-child(2) {
+         margin-bottom: 50px;
+
+     }
+
+ }
+
+@media screen and (max-width: 800px) {
+    .contenu-footer {
+        width: 320px;
+
+    }
+    .bloc {
+        width: 300px;
+        margin: 30px 30px;
+    }
+    .bloc:nth-child(1),
+    .bloc:nth-child(2) {
+        margin-bottom: 30px;
+    }
+    .bloc:nth-child(1) {
+        margin-top: 0;
+    }
+
+
+}
+
+
+
+
+
+
+

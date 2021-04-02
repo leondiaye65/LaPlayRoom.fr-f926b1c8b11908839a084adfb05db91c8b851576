@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ titre_page }}{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    {{ include('partials/_audioMusic_news.html.twig') }}
+
+
+   <h2 class="mt-4"> {{ titre_section }}</h2>
+
+    <div class="container mt-4 d-flex">
+
+
+        <div class="container ml-4">
+            <h3>PRESENTATION</h3>
+
+           LAPlayRoom.fr vous propose un tour d'horizon de l'actualité musicale. Gardez le fil de l'actu en restant connecté !
+        </div>
+
+
+    </div>
+
+{% endblock %}

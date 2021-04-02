@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Accueil{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    {{ include('partials/_audiola_play_room.html.twig') }}
+    {{ include('partials/_videola_play_room.html.twig') }}
+    <h2 class="mt-4">{{ msg_accueil }}</h2>
+
+    <div class="container d-flex mt-4">
+
+        <div>
+           <img src="{{ asset('images/LOGODRAFTLP.png')}}" alt="LaPlayRoom"  width="300" height="300">
+        </div>
+
+
+        <div class="container ml-4">
+
+    <h3>PRESENTATION</h3>
+    <p>La Playroom est une web radio créée en 2019. C'est la proposition musicale de Kayz Loum
+    pour l'agence de création audiovisuelle My Media Room qui propose du contenu vidéo et
+    audio ! La Playroom est un flux musical 24/7 qui offre une sélection éclectique. Son slogan :
+    « Dans tous les sens du son ». Elle diffuse de la old soul, de la funk, de la musique africaine
+    ainsi que les nouveaux sons afro, mais aussi du hip hop us et français, de la house music,
+    du reggae, de la musique antillaise et latine, des mixes de dj, des remixes de producteurs et
+    beatmakers, et des sessions live/acoustiques. La musique est diffusée dans toutes ses
+    sensibilités. Notre airplay a pour objectif de proposer à nos auditeurs un cocktail de playlists !<p>
+
+        </div>
+
+
+        </div>
+    </div>
+{% endblock %}

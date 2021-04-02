@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ titre_page }}{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    {{ include('partials/_audioLe14_18.html.twig') }}
+
+    <h2 class=" mt-4">{{ titre_section }}</h2>
+
+    <div class = "container mt-4 d-flex">
+
+        <div>
+    <img src="{{ asset('images/LE14-18.png')}}" alt="LE14-18" width="300" height="200">
+        </div>
+
+        <div class = "container ml-4">
+            <h3>PRESENTATION</h3>
+
+            LE 14-18
+            Tous les mardis après-midi, la playlist idéale de La Playroom vous propose la crème de sa sélection musicale. C'est le 14-18. Alors, on passe l'après-midi ensemble ? Sans interruption, retrouvez nos découvertes, les sons incontournables, les vieilleries, les nouveautés, les styles musicaux bien différents qui forment cette esthétique musicale bien propre à La Playroom !
+
+        </div>
+
+
+    </div>
+
+
+{% endblock %}

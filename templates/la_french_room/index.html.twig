@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ titre_page }}{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    {{ include('partials/_audioLaFrenchRoom.html.twig') }}
+
+    <h2 class="mt-4">{{ titre_section }}</h2>
+
+    <div class="container d-flex mt-4">
+        <div>
+            <img src="{{ asset('images/FrenchRoom19-21.png')}}" alt="LaFrenchRoom"  width="300" height="200">
+        </div>
+
+        <div class="container ml-4">
+            <H3>PRESENTATION</H3>
+
+            LA FRENCH ROOM
+            Tous les lundis entre 12h et 14h,
+            retrouvez une sélection musicale 100% frenchy et ça dans tous les sens du son !
+            Découvrez les artistes soul, hip hop, électro, chanson, pop,
+            et qu'ils fassent sonner leur musique par la langue de Molière ou pas,
+            ils ont tous ce point commun d'être francophones !
+        </div>
+
+
+
+
+
+    </div>
+
+{% endblock %}

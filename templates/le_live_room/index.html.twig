@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ titre_page }}{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    {{ include('partials/_audioLe_live_room.html.twig') }}
+
+    <h2 class="mt-4">{{ titre_section }}</h2>
+
+    <div class = "container mt-4 d-flex">
+
+        <div>
+            <img src="{{ asset('images/LIVEROOM.png')}}" alt="LE LiveROOM" width="300" height="200">
+        </div>
+
+        <div class="container ml-4">
+            <h3>PRESENTATION</h3>
+
+             LE LIVE ROOM
+             Tous les dimanches soirs de 23h à 00h dans La Playroom, nous vous jouons une playlist de titres 100% live et acoustique ! L'authenticité de la musique, c'est quand elle est jouée en live ! On se retrouve dans tous les sens du live !
+        </div>
+
+    </div>
+
+{% endblock %}
